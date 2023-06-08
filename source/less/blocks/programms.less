@@ -1,3 +1,17 @@
+.programms__list {
+  display: grid;
+  gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    gap: 30px;
+  }
+
+  @media (min-width: @desctop-width) {
+    gap: 80px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .programms__item {
   background-color: @special-lightest;
   text-transform: uppercase;

@@ -1,0 +1,20 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 55px 0 61px 0;
+  }
+}
+
+.contacts__logo {
+  margin: 39px auto 32px auto;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+}

@@ -4,6 +4,21 @@
   line-height: 40px;
 }
 
+.description__list {
+  display: grid;
+  gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 153px;
+  }
+
+  @media (min-width: @desctop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 80px;
+  }
+}
+
 .description__item {
   font-family: "Arial", sans-serif;
   padding-left: 100px;

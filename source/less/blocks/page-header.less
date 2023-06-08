@@ -1,0 +1,33 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.page-header__logo {
+  display: flex;
+  align-items: center;
+  min-height: 71px;
+  padding-top: 12px;
+  padding-bottom: 22px;
+}
+
+.page-header__logo-icon {
+  width: 33.32px;
+  height: 37.61px;
+}
+
+.page-header__logo-text {
+  width: 101px;
+  height: 18px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: @tablet-width) {
+    margin: none;
+  }
+}
