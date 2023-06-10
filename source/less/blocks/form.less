@@ -7,12 +7,13 @@
   text-transform: uppercase;
   color: @special-darker;
   font-size: 16px;
-  .center;
+  // .center;
 }
 
 .form__legend {
   font-size: 24px;
   line-height: 26px;
+  width: 100%;
 }
 
 .form__input::placeholder {
@@ -26,4 +27,18 @@
 .form__instruction {
   line-height: 16px;
   color: @basik-dark;
+}
+
+.form__submit-button {
+  width: 100%;
+  padding: 11px 29px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 282px;
+    margin-right: 61px;
+  }
+
+  @media (min-width: @desctop-width) {
+    max-width: 568px;
+  }
 }
