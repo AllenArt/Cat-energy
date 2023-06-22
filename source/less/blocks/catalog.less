@@ -1,8 +1,33 @@
+.catalog__list {
+  @media (min-width: @tablet-width) {
+    // padding: 0 30px;
+    .center();
+    display: grid;
+    gap: 60px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desctop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
+  }
+}
+
 .catalog__item {
-  .center();
+  padding: 0 35px 40px 35px;
+
+  @media (min-width: @tablet-width) {
+    height: 511px;
+  }
 }
 
 .catalog__link-to-all {
   background-color: @special-lightest;
   color: @special-darker;
+}
+
+.catalog__item--to-all-link {
+  @media (min-width: @tablet-width) {
+    text-align: center;
+  }
 }
