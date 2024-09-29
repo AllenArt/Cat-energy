@@ -6,7 +6,7 @@
     gap: 30px;
   }
 
-  @media (min-width: @desctop-width) {
+  @media (min-width: @desktop-width) {
     gap: 80px;
     grid-template-columns: 1fr 1fr;
   }
@@ -15,21 +15,148 @@
 .programms__item {
   background-color: @special-lightest;
   text-transform: uppercase;
+  padding: 30px 20px 20px 20px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto;
+
+  @media (min-width: @tablet-width) {
+    padding: 77px 28px 53px 53px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 41px 52px 52px 55px;
+  }
 }
 
 .programms__header {
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
+  order: 1;
+  margin: 0;
+  align-self: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    order: 0;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-bottom: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+}
+
+.programms__header--slim {
+  padding-left: 19px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+  }
+}
+
+.programms__header--pro {
+  padding-left: 11px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+  }
+}
+
+.programms__logo {
+  order: 0;
+  padding-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 18px;
+    order: 1;
+    border: none;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 47px 39px 0px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}
+
+.programms__logo--slim {
+  @media (min-width: @tablet-width) {
+    min-width: 200px;
+    min-height: 211px;
+    padding-right: 34px;
+  }
+}
+
+.programms__logo--pro {
+  @media (min-width: @tablet-width) {
+    min-width: 268px;
+    min-height: 200px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -20px;
+  }
 }
 
 .programms__description {
   font-family: "Arial", sans-serif;
   color: @special-darker;
   text-transform: none;
+  padding-bottom: 23px;
+  border-bottom: 1px solid @style-semi-dark;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  margin: 0;
+  order: 1;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
 }
 
 .programms__link {
   font-size: 16px;
   line-height: 16px;
+  margin-bottom: 0px;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  order: 1;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-size: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
 }
+
+.programms__link-header {
+  padding-right: 17px;
+}
+
+

@@ -7,24 +7,28 @@
   text-align: center;
   padding-top: 27px;
   margin-bottom: 22px;
+  background-size: contain;
 
   @media (min-width: @tablet-width) {
+    padding-top: 0;
     color: @basik-dark;
     background-image: none;
     background-color: @basik-light;
     text-align: left;
   }
-}
-/* нужно сделать для этой секции и шапки
-  @media (min-width: @desctop-width) {
-    background-image: linear-gradient(to left, fade(@base-accent, 85%) 50%, @basik-light 50%), url("../../img/cat-background-desctop.jpg");
+
+  @media (min-width: @desktop-width) {
+    background-image: linear-gradient(to left, fade(@base-accent, 85%) 50%, @basik-light 50%), url("../../img/cat-background-desktop.jpg");
     background-position: center, right;
     background-repeat: no-repeat;
+    background-size: auto, 50%;
+    padding-top: 141px;
+    position: relative;
   }
-  */
+}
 
 .intro__wrapper {
-  @media (min-width: @desctop-width) {
+  @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: row;
   }
@@ -47,6 +51,10 @@
     font-size: 60px;
     line-height: 60px;
   }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 82px;
+  }
 }
 
 .intro__slogan {
@@ -61,6 +69,9 @@
     line-height: 20px;
     padding-bottom: 20px;
   }
+
+
+
 }
 
 .intro__picture {
@@ -68,10 +79,13 @@
   width: 100%;
   height: auto;
 
-  @media (min-width: @desctop-width) {
+  @media (min-width: @desktop-width) {
     max-height: 499px;
     width: auto;
+    position: relative;
+    margin-left: -10px;
   }
+
 }
 
 .intro__link-to-form {
@@ -84,11 +98,11 @@
     max-width: 244px;
     font-size: 20px;
     line-height: 20px;
-    top: 300px;
+    top: 370px;
     left: 117px;
   }
 
-  @media (min-width: @desctop-width) {
+  @media (min-width: @desktop-width) {
     left: 190px;
     top: 455px;
   }

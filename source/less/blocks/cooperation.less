@@ -1,12 +1,47 @@
 .cooperation {
   background-color: @basik-light;
+}
+
+.cooperation-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: @basik-light;
+
+  @media (min-width: @tablet-width) {
+    padding: 34px 41px 23px 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 59px 71px 49px 71px;
+    max-width: 570px;
+    position: relative;
+    top: 95px;
+  }
 }
 
 .cooperation--inner {
   background-color: @special-lightest;
+}
+
+.cooperation__map {
+  min-height: 476px;
+  background-image: url(../../img/Map.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+
+  @media (min-width: @tablet-width) {
+    min-height: 400px;
+    background-image: url(../../img/Map-tablet.png);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -200px;
+    background-image: url(../../img/Map-desktop.png);
+  }
 }
 
 .cooperation__intro {
@@ -14,10 +49,21 @@
   text-transform: uppercase;
   color: @text-dark;
   font-weight: 400;
+  margin-top: 14px;
+  margin-bottom: 14px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 21px;
+  }
 }
 
 .cooperation__address {
   font-family: "Arial", sans-serif;
   line-height: 20px;
   color: @special-darker;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+  }
 }
