@@ -30,7 +30,6 @@
   height: 18px;
   top: 22px;
   right: 22px;
-  background-image: url("../../img/mobile_close.svg");
   border: none;
   background-color: transparent;
   background-size: 18px 18px;
@@ -38,6 +37,18 @@
   @media (min-width: @tablet-width) {
     display: none;
   }
+}
+
+.main-nav__opened .main-nav__toggle {
+  background-image: url("../../img/mobile_close.svg");
+}
+
+.main-nav__closed .main-nav__toggle {
+  background-image: url("../../img/mobile_open.svg");
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
 }
 
 .main-nav__list {
@@ -65,5 +76,11 @@
 
   @media (min-width: @tablet-width) {
     border: none;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav__closed .main-nav__item {
+    display: none;
   }
 }
